@@ -1,0 +1,61 @@
+index.js
+app.delete("/profile", authenticate, async (req, res, next) => {
+  // get the username from res.username
+  try{
+    let user = await db.deleteUser(res.username);
+    res.status(200).json(user);
+  } catch (err) {
+    next(err);
+  }
+});
+
+requester.js
+let deleteUser = async function (token) {
+  // TODO
+  return await request(`${apiUrl}/profile`, {
+    method: "DELETE",
+    headers: { // makes sure that we're logged in
+      Authorization: "Bearer " + token,
+    },
+  });
+};
+
+
+db.js
+async function deleteUser(username) {
+  // no validation just delete the user
+  // Deleting reviews from user
+  let res = await client.query(
+    `DELETE from reviews WHERE author=$1`,
+    [username]
+  );
+  res = await client.query(
+    `DELETE FROM users WHERE username=$1`,
+    [username]
+  );
+  return res.rows;
+}
+1. 2 3 option
+2.
+3. 2 4 5 didn't reduce repetitive
+4. 2
+large amounts
+5. 1
+6. freq
+automate
+delivery
+7 last
+8
+javadoc
+doxygen
+9. true
+10 false
+
+which documentation tools
+doxygen
+
+ghostdoc
+
+travins
+
+tucker didn't say repetitive process

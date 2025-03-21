@@ -1,0 +1,6 @@
+gdb bomb
+b phase_2
+b explode_bomb
+r solution.txt
+layout asm
+layout regs

@@ -1,0 +1,26 @@
+13036@MSI MINGW64 ~/lab1-initial-setup-muer6793 (main)
+$ git add .
+
+13036@MSI MINGW64 ~/lab1-initial-setup-muer6793 (main)
+$ git commit -m doing this for America!
+error: pathspec 'this' did not match any file(s) known to git
+error: pathspec 'for' did not match any file(s) known to git
+error: pathspec 'America!' did not match any file(s) known to git
+
+13036@MSI MINGW64 ~/lab1-initial-setup-muer6793 (main)
+$ git commit -m "doing this for America!"
+[main cc90555] doing this for America!
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test1.txt
+
+13036@MSI MINGW64 ~/lab1-initial-setup-muer6793 (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 308 bytes | 308.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/cub-csci-3308-spring-2022/lab1-initial-setup-muer6793.git
+   4f62bbb..cc90555  main -> main

@@ -1,0 +1,82 @@
+
+13036@MSI MINGW64 ~
+$ docker run hello-world ------------------- Part 1
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+
+13036@MSI MINGW64 ~ ------------------- Part 2
+$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+ebc7963ae8d1   hello-world   "/hello"   8 seconds ago    Exited (0) 7 seconds ago              hardcore_dirac
+
+13036@MSI MINGW64 ~ ------------------- Part 3
+$ docker rm hardcore_dirac
+hardcore_dirac
+
+13036@MSI MINGW64 ~
+$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED              STATUS                          PORTS     NAMES
+
+13036@MSI MINGW64 ~ ------------------- Part 4
+$ docker run --rm hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+
+13036@MSI MINGW64 ~
+$ docker run -dt ubuntu bash ------------------- Part 5
+0912dbc88b757e03e89201d5af737c34d0d3df16ec6f7fad90a79d23ef1e899c
+
+13036@MSI MINGW64 ~
+$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
+0912dbc88b75   ubuntu    "bash"    6 seconds ago   Up 5 seconds             bold_einstein
+
+13036@MSI MINGW64 ~
+$ docker rm bold
+Error: No such container: bold
+
+13036@MSI MINGW64 ~
+$ docker rm bold_einstein
+Error response from daemon: You cannot remove a running container 0912dbc88b757e03e89201d5af737c34d0d3df16ec6f7fad90a79d23ef1e899c. Stop the container before attempting removal or force remove
+
+13036@MSI MINGW64 ~
